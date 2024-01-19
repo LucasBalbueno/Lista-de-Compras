@@ -12,15 +12,13 @@ html {
 }
 
 .principal {
-    flex-grow: 1;
-    flex-basis: auto;
-    min-width: 600px;
     padding: 4em 2em 2em;
     box-sizing: border-box;
     display: flex;
     background: #7e7d7d;
     border-radius: 10px;
     gap: 2em;
+    width: 60vw;
 }
 
 .carrinho{
@@ -54,6 +52,7 @@ html {
 .lista {
     margin: 0;
     padding: 0;
+    width: 35rem;
 }
 
 .item {
@@ -64,19 +63,67 @@ html {
     margin: 0 0 1em;
     width: 100%;
     box-sizing: border-box;
-    display: inline-flex;
     align-items: center;
     gap: 1em;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .item strong {
-    border-radius: 50%;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
     height: 40px;
     Background: #6d0e8a;
     font-weight: 400;
+    width: auto;
+    padding: .5rem 1rem;
+}
+
+.botaoX {
+    background-color: transparent;
+    border: 2px solid #6d0e8a;
+    border-radius: 10px;
+    color: #6d0e8a;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .conteudo {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .principal {
+        margin-top: 3rem;
+        padding: 2em 1em 2em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carrinho{
+        width: 80%;
+        height: auto;
+    }
+    
+    .lista {
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+
+    .item {
+        padding: 0.6em 1em;
+    }
+
+    .item strong {
+        height: 1.5rem;
+    }
 }
